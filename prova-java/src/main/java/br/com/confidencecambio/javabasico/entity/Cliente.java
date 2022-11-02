@@ -1,5 +1,7 @@
 package br.com.confidencecambio.javabasico.entity;
 
+import java.util.stream.Stream;
+
 public class Cliente extends User{
     public Cliente(String name) {
         super(name);
@@ -8,6 +10,11 @@ public class Cliente extends User{
     @Override
     public String getFirstName() {
         return super.getFirstName();
+    }
+
+    @Override
+    public String getLastNames() {
+        return super.getLastNames();
     }
 
     @Override

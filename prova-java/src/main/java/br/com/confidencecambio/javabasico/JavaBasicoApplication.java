@@ -15,8 +15,9 @@ public class JavaBasicoApplication {
 
 		cliente.setName(teste);
 
-		System.out.println("Primeiro nome do Cliente: " + cliente.getName());
+		System.out.println("Nome completo do Cliente: " + cliente.getName());
 		System.out.println("Primeiro nome do Cliente: " + cliente.getFirstName());
+		System.out.println("Sobrenome(s) do Cliente: " + cliente.getLastNames());
 
 		SpringApplication.run(JavaBasicoApplication.class, args);
 	}
