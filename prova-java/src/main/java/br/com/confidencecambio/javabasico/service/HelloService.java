@@ -11,6 +11,7 @@ public class HelloService {
     private static final String valorPadrao = "Mundo";
 
     public String retornaValorValido(@Nullable String nome) {
+
         return Optional.ofNullable(nome).orElse(valorPadrao);
     }
 }
