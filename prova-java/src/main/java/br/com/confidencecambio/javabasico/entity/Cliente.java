@@ -18,6 +18,16 @@ public class Cliente extends User{
     }
 
     @Override
+    public String getUpperCasedName() {
+        return super.getUpperCasedName();
+    }
+
+    @Override
+    public String getShortName() {
+        return super.getShortName();
+    }
+
+    @Override
     public String getName() {
         return super.getName();
     }

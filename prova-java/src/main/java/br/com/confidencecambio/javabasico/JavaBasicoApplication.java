@@ -9,7 +9,7 @@ public class JavaBasicoApplication {
 
 	public static void main(String[] args) {
 
-		String teste = "     Guilherme de Carvalho Costa ";
+		String teste = "     Guilherme Carvalho Costa ";
 
 		Cliente cliente = new Cliente(teste);
 
@@ -18,6 +18,8 @@ public class JavaBasicoApplication {
 		System.out.println("Nome completo do Cliente: " + cliente.getName());
 		System.out.println("Primeiro nome do Cliente: " + cliente.getFirstName());
 		System.out.println("Sobrenome(s) do Cliente: " + cliente.getLastNames());
+		System.out.println("Nome completo do Cliente em letra maiúscula: " + cliente.getUpperCasedName());
+		System.out.println("Nome completo do Cliente abreviado: " + cliente.getShortName());
 
 		SpringApplication.run(JavaBasicoApplication.class, args);
 	}

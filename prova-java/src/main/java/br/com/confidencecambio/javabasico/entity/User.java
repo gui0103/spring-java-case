@@ -3,6 +3,7 @@ package br.com.confidencecambio.javabasico.entity;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 import java.util.Arrays;
+import java.util.Locale;
 import java.util.stream.Stream;
 
 public abstract class User {
@@ -25,6 +26,21 @@ public abstract class User {
         fullName.delete(0, index + 1);
 
         return fullName.toString();
+    }
+
+    public String getUpperCasedName() {
+        return getName().toUpperCase(Locale.ROOT);
+    }
+
+    public String getShortName() {
+        String[] names = this.name.split(" ");
+        char letter = names[1].charAt(0);
+        String shortName = String.format("%s %c.", names[0], letter);
+
+        StringBuffer lastNames = new StringBuffer(getLastNames());
+        int index = lastNames.indexOf(" ");
+
+        return shortName + " " + lastNames.delete(0, index + 1);
     }
 
     public String getName() {
