@@ -9,6 +9,9 @@ public abstract class User {
     private String name;
 
     public User(String name) {
+        if (name.isBlank() || name.isEmpty()) {
+            throw new IllegalArgumentException("O nome não pode ser nulo ou vazio!");
+        }
         this.name = name.trim();
     }
 
@@ -39,8 +42,6 @@ public abstract class User {
         if (Character.isLowerCase(letter)) {
             char letterUpperCase = names[2].charAt(0);
             String shortName = String.format("%s %s %c.", names[0], names[1], letterUpperCase);
-
-            // de Carvalho Costa
             response = shortName + removeFirstThreeWords();
         }
         else {
@@ -70,6 +71,9 @@ public abstract class User {
     }
 
     public void setName(String name) {
+        if (name.isBlank() || name.isEmpty()) {
+            throw new IllegalArgumentException("O nome não pode ser nulo ou vazio!");
+        }
         this.name = name.trim();
     }
 }

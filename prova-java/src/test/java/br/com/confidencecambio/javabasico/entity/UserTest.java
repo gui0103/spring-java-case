@@ -8,7 +8,6 @@ class UserTest {
 
     Cliente cliente = new Cliente("Guilherme de Carvalho Costa");
     Gerente gerente = new Gerente("João Soares Silva");
-
     Robo robo = new Robo("Alexa Siri Cortana GPT-3");
 
     @Test
@@ -33,6 +32,12 @@ class UserTest {
     void getShortNameHaveToRun() {
         var methodReturn = cliente.getShortName();
         assertEquals("Guilherme de C. Costa", methodReturn);
+    }
+
+    @Test
+    void getShortNameWithNoMiddleLowerCaseWordHaveToRun() {
+        var methodReturn = gerente.getShortName();
+        assertEquals("João S. Silva", methodReturn);
     }
 
     @Test

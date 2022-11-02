@@ -16,6 +16,9 @@ public class IMCController {
     @GetMapping
     public ResponseEntity<Double> getIMC(@RequestParam(value = "weight", required = true) Double weight,
                                          @RequestParam(value = "height", required = true) Double height) {
+        if (weight <= 0 || height <= 0) {
+            return new ResponseEntity<Double>(0.00, HttpStatus.BAD_REQUEST);
+        }
         return new ResponseEntity<Double>(imcService.getIMC(weight, height), HttpStatus.OK);
     }
 }

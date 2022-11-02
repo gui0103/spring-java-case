@@ -9,30 +9,36 @@ public class JavaBasicoApplication {
 
 	public static void main(String[] args) {
 
-		String teste = "     Guilherme de Carvalho Costa ";
+		// Deixei as Strings com espaços para o teste de remover espaços em branco
+		// do começo e fim
 
-		String teste2 = "     Guilherme Carvalho Costa ";
+		String name = "     Guilherme de Carvalho Costa ";
 
-		Cliente cliente = new Cliente(teste);
+		String name2 = "     João Soares Silva ";
 
-		cliente.setName(teste);
+		Cliente cliente = new Cliente(name);
 
+		cliente.setName(name);
+
+		System.out.println("----------------------------------------------------------------------------------");
 		System.out.println("Nome completo do Cliente: " + cliente.getName());
 		System.out.println("Primeiro nome do Cliente: " + cliente.getFirstName());
 		System.out.println("Sobrenome(s) do Cliente: " + cliente.getLastNames());
-		System.out.println("Nome completo do Cliente em letra maiúscula: " + cliente.getUpperCasedName());
+		System.out.println("Nome completo do Cliente em letra maiuscula: " + cliente.getUpperCasedName());
 		System.out.println("Nome completo do Cliente abreviado: " + cliente.getShortName());
-		System.out.println("\n \n \n \n \n");
+		System.out.println("----------------------------------------------------------------------------------\n");
 
-		Cliente cliente2 = new Cliente(teste2);
+		Cliente cliente2 = new Cliente(name2);
 
-		cliente2.setName(teste2);
+		cliente2.setName(name2);
 
+		System.out.println("----------------------------------------------------------------------------------");
 		System.out.println("Nome completo do Cliente: " + cliente2.getName());
 		System.out.println("Primeiro nome do Cliente: " + cliente2.getFirstName());
 		System.out.println("Sobrenome(s) do Cliente: " + cliente2.getLastNames());
-		System.out.println("Nome completo do Cliente em letra maiúscula: " + cliente2.getUpperCasedName());
+		System.out.println("Nome completo do Cliente em letra maiuscula: " + cliente2.getUpperCasedName());
 		System.out.println("Nome completo do Cliente abreviado: " + cliente2.getShortName());
+		System.out.println("----------------------------------------------------------------------------------\n");
 
 		SpringApplication.run(JavaBasicoApplication.class, args);
 	}
