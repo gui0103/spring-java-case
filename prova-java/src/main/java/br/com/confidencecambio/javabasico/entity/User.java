@@ -1,16 +1,11 @@
 package br.com.confidencecambio.javabasico.entity;
 
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Locale;
-import java.util.stream.Stream;
 
 public abstract class User {
 
     @NotBlank
-    @Size(min = 2, max = 100)
     private String name;
 
     public User(String name) {

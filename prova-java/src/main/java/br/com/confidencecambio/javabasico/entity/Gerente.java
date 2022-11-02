@@ -1,7 +1,7 @@
 package br.com.confidencecambio.javabasico.entity;
 
-public class Cliente extends User{
-    public Cliente(String name) {
+public class Gerente extends User{
+    public Gerente(String name) {
         super(name);
     }
 
