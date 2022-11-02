@@ -41,7 +41,7 @@ public abstract class User {
             String shortName = String.format("%s %s %c.", names[0], names[1], letterUpperCase);
 
             // de Carvalho Costa
-            response = shortName + removeWords();
+            response = shortName + removeFirstThreeWords();
         }
         else {
             String shortName = String.format("%s %c.", names[0], letter);
@@ -54,11 +54,11 @@ public abstract class User {
         return response;
     }
 
-    public String removeWords() {
-        String[] array = getLastNames().split(" ");
+    public String removeFirstThreeWords() {
+        String[] array = getName().split(" ");
         StringBuilder response = new StringBuilder(String.format(""));
             for (int i = 0; i < array.length; i++) {
-                if (i > 1) {
+                if (i > 2) {
                     response.append(" ").append(array[i].toString());
                 }
             }

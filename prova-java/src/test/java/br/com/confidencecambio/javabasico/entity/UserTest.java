@@ -7,36 +7,85 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserTest {
 
     Cliente cliente = new Cliente("Guilherme de Carvalho Costa");
+    Gerente gerente = new Gerente("João Soares Silva");
+
+    Robo robo = new Robo("Alexa Siri Cortana GPT-3");
 
     @Test
-    void getFirstName() {
+    void getFirstNameHaveToRun() {
         var methodReturn = cliente.getFirstName();
         assertEquals("Guilherme", methodReturn);
     }
 
     @Test
-    void getLastNames() {
+    void getLastNamesHaveToRun() {
         var methodReturn = cliente.getLastNames();
         assertEquals("de Carvalho Costa", methodReturn);
     }
 
     @Test
-    void getUpperCasedName() {
+    void getUpperCasedNameHaveToRun() {
+        var methodReturn = cliente.getUpperCasedName();
+        assertEquals("GUILHERME DE CARVALHO COSTA", methodReturn);
     }
 
     @Test
-    void getShortName() {
+    void getShortNameHaveToRun() {
+        var methodReturn = cliente.getShortName();
+        assertEquals("Guilherme de C. Costa", methodReturn);
     }
 
     @Test
-    void removeWords() {
+    void removeWordsHaveToRun() {
+        var methodReturn = cliente.removeFirstThreeWords();
+        assertEquals(" Costa", methodReturn);
     }
 
     @Test
-    void getName() {
+    void getNameHaveToRun() {
+        var methodReturn = cliente.getName();
+        assertEquals("Guilherme de Carvalho Costa", methodReturn);
     }
 
     @Test
-    void setName() {
+    void getFirstNameHaveToRunWithAnotherNameAlso() {
+        var methodReturn = robo.getFirstName();
+        assertEquals("Alexa", methodReturn);
+    }
+
+    @Test
+    void getLastNamesHaveToRunWithAnotherNameAlso() {
+        var methodReturn = robo.getLastNames();
+        assertEquals("Siri Cortana GPT-3", methodReturn);
+    }
+
+    @Test
+    void getUpperCasedNameHaveToRunWithAnotherNameAlso() {
+        var methodReturn = robo.getUpperCasedName();
+        assertEquals("ALEXA SIRI CORTANA GPT-3", methodReturn);
+    }
+
+    @Test
+    void getShortNameHaveToRunWithAnotherNameAlso() {
+        var methodReturn = robo.getShortName();
+        assertEquals("Alexa S. Cortana GPT-3", methodReturn);
+    }
+
+    @Test
+    void removeWordsHaveToRunWithAnotherNameAlso() {
+        var methodReturn = robo.removeFirstThreeWords();
+        assertEquals(" GPT-3", methodReturn);
+    }
+
+    @Test
+    void removeWordsHaveToRunWithASmallerNameAlso() {
+        var methodReturn = gerente.removeFirstThreeWords();
+        assertEquals("", methodReturn);
+    }
+
+    @Test
+    void getNameHaveToRunWithAnotherNameAlso() {
+        var methodReturn = robo.getName();
+        assertEquals("Alexa Siri Cortana GPT-3", methodReturn);
     }
 }
