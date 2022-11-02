@@ -7,8 +7,10 @@
   <img align="center" alt="Java" height="95" padding="10" src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg">
 </div>
 
-<h4 align="center">
-  --> Testes unitários implementados por meio do JUnit <br>
-  --> Documentação da API feita com Swagger <br>
-  --> Exemplos do funcionamento do código na classe Main <br>
-</h4>
+<div align="center">
+  <h4 align="left">
+    --> Testes unitários implementados por meio do JUnit <br>
+    --> Documentação da API feita com Swagger <br>
+    --> Exemplos do funcionamento do código na classe Main <br>
+  </h4>
+</div>
